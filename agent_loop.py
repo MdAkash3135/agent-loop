@@ -22,4 +22,6 @@ while True:
     if response.choices[0].finish_reason == "stop":
         break
     else:
-        break
+        continue_input = input("Do you want to continue? (yes/no): ")
+        if continue_input.lower() != "yes":
+            break
